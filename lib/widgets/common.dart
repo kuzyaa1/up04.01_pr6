@@ -120,7 +120,15 @@ class AppScaffold extends StatelessWidget {
               onDestinationSelected: (i) => context.go(visible[i].$3),
               destinations: [
                 for (final d in visible)
-                  NavigationDestination(icon: Icon(d.$1), label: d.$2)
+                  NavigationDestination(
+                    icon: Tooltip(message: d.$2, child: Icon(d.$1)),
+                    label: switch (d.$3) {
+                      '/bookings' => 'Брони',
+                      '/photographers' => 'Фото',
+                      '/equipment' => 'Техника',
+                      _ => d.$2,
+                    },
+                  )
               ]));
     }
     return Scaffold(
@@ -132,7 +140,10 @@ class AppScaffold extends StatelessWidget {
               onDestinationSelected: (i) => context.go(visible[i].$3),
               destinations: [
                 for (final d in visible)
-                  NavigationRailDestination(icon: Icon(d.$1), label: Text(d.$2))
+                  NavigationRailDestination(
+                    icon: Tooltip(message: d.$2, child: Icon(d.$1)),
+                    label: Text(d.$2),
+                  )
               ]),
           const VerticalDivider(width: 1),
           Expanded(

@@ -1,0 +1,310 @@
+00:00 +0: loading C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/api_repository_test.dart
+00:00 +0: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/api_repository_test.dart: ApiHallRepository разбирает страницу залов с сервера
+00:00 +1: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/api_repository_test.dart: ApiHallRepository поиск, фильтры и сортировка уходят на сервер
+00:00 +2: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/api_repository_test.dart: ApiHallRepository ошибка 422 разбирается в ValidationException с полями
+00:00 +3: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/api_repository_test.dart: ApiHallRepository недоступность сервера превращается в NetworkException
+[API] повтор 1 из 3 после сетевого сбоя
+[API] повтор 2 из 3 после сетевого сбоя
+00:01 +4: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/api_repository_test.dart: ApiHallRepository недоступность сервера превращается в NetworkException
+00:01 +5: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/cancel_token_test.dart: отмена устаревших запросов после отмены приходит новый результат, а не ошибка
+00:01 +6: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/cancel_token_test.dart: отмена устаревших запросов после отмены приходит новый результат, а не ошибка
+00:01 +7: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/cancel_token_test.dart: отмена устаревших запросов после отмены приходит новый результат, а не ошибка
+00:01 +8: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/cancel_token_test.dart: отмена устаревших запросов после отмены приходит новый результат, а не ошибка
+00:01 +9: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/cancel_token_test.dart: отмена устаревших запросов после отмены приходит новый результат, а не ошибка
+00:01 +10: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +11: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +12: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +13: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +14: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +15: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +16: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +17: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +18: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +18: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/api_repository_test.dart: автоматический повтор сетевой сбой повторяется и запрос в конце проходит
+[API] повтор 1 из 3 после сетевого сбоя
+[API] повтор 2 из 3 после сетевого сбоя
+00:01 +19: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +19: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/api_repository_test.dart: автоматический повтор после трёх неудачных попыток ошибка пробрасывается дальше
+[API] повтор 1 из 3 после сетевого сбоя
+[API] повтор 2 из 3 после сетевого сбоя
+00:01 +20: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +21: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:01 +22: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +23: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +24: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +25: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +26: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +27: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +28: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +29: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +30: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:02 +31: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +32: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +33: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +34: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +35: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +36: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +37: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +38: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +39: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +40: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +41: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +42: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +43: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +44: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:03 +45: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:04 +46: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:04 +47: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:04 +48: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:04 +49: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:04 +50: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:04 +51: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:04 +52: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +53: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +54: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +55: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +56: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +57: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +58: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +59: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +60: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +61: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +62: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +63: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +64: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +65: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +66: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +67: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +68: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +69: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +70: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +71: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +72: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +73: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +74: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +75: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +76: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +77: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +78: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +79: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +80: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +81: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +82: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +83: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:05 +84: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +85: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +86: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +87: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +88: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +89: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +90: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +91: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +91: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/deletion_conflict_test.dart: 409: bulk=false hard=false сохраняет список и выделение
+[API] → GET http://localhost/api/halls?sort=name%2Casc&page=1&size=10
+00:06 +92: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +93: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +94: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +95: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:06 +96: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +97: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +98: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +99: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +100: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +101: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +102: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +103: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +104: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +105: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +106: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +107: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +108: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:07 +109: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/client_booking_form_test.dart: клиент бронирует зал без выбора чужого клиента и ввода кода
+00:08 +110: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/deletion_conflict_test.dart: 409: bulk=false hard=false сохраняет список и выделение
+[API] ← 200 http://localhost/api/halls?sort=name%2Casc&page=1&size=10
+[API] → DELETE http://localhost/api/halls/1
+[API] ← 409 http://localhost/api/halls/1
+[API] DELETE http://localhost/api/halls/1 → 409: DioExceptionType.badResponse
+00:08 +111: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: множественный выбор и каскадный сброс участвуют в validate
+00:09 +111: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/deletion_conflict_test.dart: 409: bulk=false hard=true сохраняет список и выделение
+[API] → GET http://localhost/api/halls?sort=name%2Casc&page=1&size=10
+[API] ← 200 http://localhost/api/halls?sort=name%2Casc&page=1&size=10
+[API] → DELETE http://localhost/api/halls/1?hard=true
+[API] ← 409 http://localhost/api/halls/1?hard=true
+[API] DELETE http://localhost/api/halls/1?hard=true → 409: DioExceptionType.badResponse
+00:09 +112: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: множественный выбор и каскадный сброс участвуют в validate
+00:09 +113: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice5_test.dart: проверка пароля регистрации срабатывает при вводе
+00:10 +114: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: главная: ширина 360.0 без переполнений
+00:10 +115: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/deletion_conflict_test.dart: 409: bulk=true hard=false сохраняет список и выделение
+[API] → GET http://localhost/api/halls?sort=name%2Casc&page=1&size=10
+[API] ← 200 http://localhost/api/halls?sort=name%2Casc&page=1&size=10
+[API] → POST http://localhost/api/halls/bulk-delete
+[API] ← 409 http://localhost/api/halls/bulk-delete
+[API] POST http://localhost/api/halls/bulk-delete → 409: DioExceptionType.badResponse
+00:10 +116: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: исправление уникального значения снимает ошибку поля
+00:10 +117: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +117: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/deletion_conflict_test.dart: 409: bulk=true hard=true сохраняет список и выделение
+[API] → GET http://localhost/api/halls?sort=name%2Casc&page=1&size=10
+[API] ← 200 http://localhost/api/halls?sort=name%2Casc&page=1&size=10
+[API] → POST http://localhost/api/halls/bulk-delete?hard=true
+[API] ← 409 http://localhost/api/halls/bulk-delete?hard=true
+[API] POST http://localhost/api/halls/bulk-delete?hard=true → 409: DioExceptionType.badResponse
+00:11 +118: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +118: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/deletion_conflict_test.dart: HTTP 409 сохраняет сообщение сервера в исключении
+[API] → DELETE http://localhost/api/halls/1
+[API] ← 409 http://localhost/api/halls/1
+[API] DELETE http://localhost/api/halls/1 → 409: DioExceptionType.badResponse
+00:11 +119: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +120: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +121: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +122: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +123: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +124: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +125: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:11 +126: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:12 +126: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice5_test.dart: несколько 401 вызывают один refresh и повтор с новым Authorization
+[API] → GET http://localhost/api/one
+[API] → GET http://localhost/api/two
+[API] ← 401 http://localhost/api/one
+[API] ← 401 http://localhost/api/two
+[API] → POST http://localhost/api/auth/refresh
+[API] ← 200 http://localhost/api/auth/refresh
+[API] → GET http://localhost/api/one
+[API] → GET http://localhost/api/two
+[API] ← 200 http://localhost/api/one
+[API] ← 200 http://localhost/api/two
+00:12 +127: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:12 +127: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice5_test.dart: плохой refresh завершает сессию и не зацикливает запросы
+[API] → GET http://localhost/api/halls
+[API] ← 401 http://localhost/api/halls
+[API] → POST http://localhost/api/auth/refresh
+[API] ← 401 http://localhost/api/auth/refresh
+[API] POST http://localhost/api/auth/refresh → 401: DioExceptionType.badResponse
+[API] GET http://localhost/api/halls → 401: DioExceptionType.badResponse
+00:12 +128: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:12 +128: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice5_test.dart: неверный пароль не вызывает refresh
+[API] → POST http://localhost/api/auth/login
+[API] ← 401 http://localhost/api/auth/login
+[API] POST http://localhost/api/auth/login → 401: DioExceptionType.badResponse
+00:12 +129: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:12 +129: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice5_test.dart: повторный 401 после refresh не вызывает второй refresh
+[API] → GET http://localhost/api/halls
+[API] ← 401 http://localhost/api/halls
+[API] → POST http://localhost/api/auth/refresh
+[API] ← 200 http://localhost/api/auth/refresh
+[API] → GET http://localhost/api/halls
+[API] ← 401 http://localhost/api/halls
+[API] GET http://localhost/api/halls → 401: DioExceptionType.badResponse
+00:12 +130: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:12 +130: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice5_test.dart: выход во время refresh не восстанавливает закрытую сессию
+[API] → POST http://localhost/api/auth/refresh
+[API] ← 200 http://localhost/api/auth/refresh
+00:12 +131: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:12 +132: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:12 +132: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice5_test.dart: подмена роли меняет только интерфейс, не серверный профиль и токен
+[API] → GET http://localhost/api/auth/me
+[API] ← 200 http://localhost/api/auth/me
+00:12 +133: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:13 +134: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:13 +135: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/widget_forms_test.dart: форма бронирования показывает текстовые поля рядом со связями
+00:13 +136: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:13 +137: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:14 +138: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:14 +139: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:14 +140: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:15 +141: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:15 +142: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:15 +143: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:16 +144: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:16 +145: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:16 +146: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:16 +147: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:17 +148: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:17 +149: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:17 +150: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:17 +151: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:17 +152: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:17 +153: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:17 +154: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:18 +155: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:18 +156: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:18 +157: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:18 +158: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:18 +159: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:18 +160: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:19 +161: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:19 +162: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:19 +163: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:20 +164: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:20 +165: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:21 +166: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:21 +167: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:21 +168: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:21 +169: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:22 +170: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:22 +171: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:22 +172: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:22 +173: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:22 +174: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:23 +175: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:23 +176: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:23 +177: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:23 +178: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:23 +179: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:23 +180: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:23 +181: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:24 +182: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice3_regression_test.dart: миграция при запуске сразу показывает уведомление
+00:24 +183: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка clients: ширина 768.0 без переполнений
+00:24 +184: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка equipment: ширина 768.0 без переполнений
+00:24 +185: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: главная: ширина 1280.0 без переполнений
+00:24 +186: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: залы: ширина 1280.0 без переполнений
+00:25 +187: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: клиенты: ширина 1280.0 без переполнений
+00:25 +188: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: брони: ширина 1280.0 без переполнений
+00:26 +189: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: оборудование: ширина 1280.0 без переполнений
+00:27 +190: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: фотографы: ширина 1280.0 без переполнений
+00:27 +191: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма зала: ширина 1280.0 без переполнений
+00:28 +192: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма клиента: ширина 1280.0 без переполнений
+00:28 +193: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма брони: ширина 1280.0 без переполнений
+00:28 +194: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма оборудования: ширина 1280.0 без переполнений
+00:28 +195: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма фотографа: ширина 1280.0 без переполнений
+00:28 +196: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: вход: ширина 1280.0 без переполнений
+00:28 +197: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: регистрация: ширина 1280.0 без переполнений
+00:29 +198: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: кабинет клиента: ширина 1280.0 без переполнений
+00:29 +199: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: место менеджера: ширина 1280.0 без переполнений
+00:29 +200: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: пользователи: ширина 1280.0 без переполнений
+00:29 +201: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: статистика: ширина 1280.0 без переполнений
+00:29 +202: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: нет доступа: ширина 1280.0 без переполнений
+00:29 +203: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка halls: ширина 1280.0 без переполнений
+00:29 +204: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка bookings: ширина 1280.0 без переполнений
+00:29 +205: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка photographers: ширина 1280.0 без переполнений
+00:29 +206: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка clients: ширина 1280.0 без переполнений
+00:30 +207: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка equipment: ширина 1280.0 без переполнений
+00:30 +208: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: главная: ширина 1920.0 без переполнений
+00:30 +209: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: залы: ширина 1920.0 без переполнений
+00:30 +210: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: клиенты: ширина 1920.0 без переполнений
+00:31 +211: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: брони: ширина 1920.0 без переполнений
+00:31 +212: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: оборудование: ширина 1920.0 без переполнений
+00:32 +213: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: фотографы: ширина 1920.0 без переполнений
+00:32 +214: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма зала: ширина 1920.0 без переполнений
+00:33 +215: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма клиента: ширина 1920.0 без переполнений
+00:33 +216: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма брони: ширина 1920.0 без переполнений
+00:33 +217: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма оборудования: ширина 1920.0 без переполнений
+00:33 +218: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: форма фотографа: ширина 1920.0 без переполнений
+00:33 +219: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: вход: ширина 1920.0 без переполнений
+00:33 +220: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: регистрация: ширина 1920.0 без переполнений
+00:34 +221: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: кабинет клиента: ширина 1920.0 без переполнений
+00:34 +222: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: место менеджера: ширина 1920.0 без переполнений
+00:34 +223: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: пользователи: ширина 1920.0 без переполнений
+00:34 +224: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: статистика: ширина 1920.0 без переполнений
+00:34 +225: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: нет доступа: ширина 1920.0 без переполнений
+00:34 +226: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка halls: ширина 1920.0 без переполнений
+00:34 +227: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка bookings: ширина 1920.0 без переполнений
+00:34 +228: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка photographers: ширина 1920.0 без переполнений
+00:35 +229: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка clients: ширина 1920.0 без переполнений
+00:35 +230: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: карточка equipment: ширина 1920.0 без переполнений
+00:35 +231: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: изменение ширины сохраняет выбранную запись
+00:35 +232: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: виден индикатор незавершённого запроса
+00:36 +233: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: пустой ответ показывает пояснение
+00:36 +234: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: ошибка сети и повтор восстанавливают список без перезагрузки
+00:36 +235: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: пустая форма входа не отправляется
+00:36 +236: C:/Users/Viki/Desktop/ТЕХ/4 курс/УП/UP2/library_web/test/practice6_test.dart: клиент не видит создание зала
+00:37 +237: All tests passed!

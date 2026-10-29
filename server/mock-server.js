@@ -38,7 +38,7 @@ function arg(name, fallback) {
 }
 
 const PORT = Number(arg('port', process.env.PORT || 8080));
-const ORIGIN = arg('origin', process.env.CORS_ORIGIN || 'http://localhost:5555');
+const ORIGIN = arg('origin', process.env.CORS_ORIGIN || process.env.RENDER_EXTERNAL_URL || 'http://localhost:5555');
 const SECRET = process.env.JWT_SECRET || crypto.randomBytes(48).toString('hex');
 const ACCESS_TTL = Number(arg('ttl', 900)); // секунд
 const REFRESH_TTL = 60 * 60 * 24 * 7;

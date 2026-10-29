@@ -46,7 +46,8 @@ class ResponsiveRecordTile extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            if (leading != null) leading!,
+            if (leading != null)
+              Tooltip(message: 'Выбрать запись', child: leading),
             Expanded(
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

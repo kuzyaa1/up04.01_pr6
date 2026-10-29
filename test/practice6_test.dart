@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:photo_studio_portal/core/permissions.dart';
 import 'package:photo_studio_portal/core/validators.dart';
 import 'package:photo_studio_portal/models/studio_hall.dart';
+import 'package:photo_studio_portal/models/booking.dart';
 import 'package:photo_studio_portal/models/hall_query.dart';
 import 'package:photo_studio_portal/models/page_result.dart';
 import 'package:photo_studio_portal/models/booking_query.dart';
@@ -20,6 +21,7 @@ import 'package:photo_studio_portal/repositories/client_repository.dart';
 import 'package:photo_studio_portal/repositories/photographer_repository.dart';
 import 'package:photo_studio_portal/repositories/equipment_repository.dart';
 import 'package:photo_studio_portal/repositories/booking_repository.dart';
+import 'package:photo_studio_portal/repositories/role_repository.dart';
 import 'package:photo_studio_portal/screens/home_screen.dart';
 import 'package:photo_studio_portal/screens/hall_list_screen.dart';
 import 'package:photo_studio_portal/screens/client_list_screen.dart';
@@ -33,6 +35,9 @@ import 'package:photo_studio_portal/screens/equipment_form_screen.dart';
 import 'package:photo_studio_portal/screens/photographer_form_screen.dart';
 import 'package:photo_studio_portal/screens/login_screen.dart';
 import 'package:photo_studio_portal/screens/register_screen.dart';
+import 'package:photo_studio_portal/screens/role_screen.dart';
+import 'package:photo_studio_portal/screens/entity_detail_screen.dart';
+import 'package:photo_studio_portal/screens/no_access_screen.dart';
 import 'package:photo_studio_portal/state/catalog_notifier.dart';
 import 'package:photo_studio_portal/state/catalog_notifiers.dart';
 import 'package:photo_studio_portal/state/list_notifiers.dart';
@@ -52,6 +57,30 @@ class ControlledHalls extends InMemoryHallRepository {
     if (offline) return Future.error(Exception('Нет связи с сервером'));
     return super.find(query, cancelToken: cancelToken);
   }
+}
+
+class LocalRoles extends RoleRepository {
+  LocalRoles() : super(Dio());
+  @override
+  Future<List<Booking>> myBookings() async => [];
+  @override
+  Future<Map<String, dynamic>> summary(String path) async => {
+        'users': 4,
+        'halls': 25,
+        'clients': 10,
+        'bookings': 10,
+        'activeBookings': 8,
+        'deletedRecords': 0,
+      };
+  @override
+  Future<List<AppUser>> users() async => [
+        const AppUser(
+            id: 2,
+            username: 'client',
+            fullName: 'Клиент фотостудии с длинным именем',
+            email: 'client@example.com',
+            role: 'client')
+      ];
 }
 
 Future<void> mount(WidgetTester tester, Widget child,
@@ -74,6 +103,7 @@ Future<void> mount(WidgetTester tester, Widget child,
     Provider<BookingRepository>.value(value: repos.bookings),
     Provider<PhotographerRepository>.value(value: repos.photographers),
     Provider<EquipmentRepository>.value(value: repos.equipment),
+    Provider<RoleRepository>(create: (_) => LocalRoles()),
     ChangeNotifierProvider(create: (_) => HallListNotifier(halls)),
     ChangeNotifierProvider(create: (_) => ClientListNotifier(repos.clients)),
     ChangeNotifierProvider(create: (_) => BookingListNotifier(repos.bookings)),
@@ -129,6 +159,19 @@ void main() {
     'форма фотографа': const PhotographerFormScreen(),
     'вход': const LoginScreen(),
     'регистрация': const RegisterScreen(),
+    'кабинет клиента': const RoleScreen(kind: 'client'),
+    'место менеджера': const RoleScreen(kind: 'manager'),
+    'пользователи': const RoleScreen(kind: 'users'),
+    'статистика': const RoleScreen(kind: 'statistics'),
+    'нет доступа': const NoAccessScreen(),
+    for (final collection in [
+      'halls',
+      'bookings',
+      'photographers',
+      'clients',
+      'equipment'
+    ])
+      'карточка $collection': EntityDetailScreen(collection: collection, id: 1),
   };
   for (final width in [360.0, 768.0, 1280.0, 1920.0]) {
     for (final screen in screens.entries) {

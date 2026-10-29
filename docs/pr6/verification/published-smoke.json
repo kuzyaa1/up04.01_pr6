@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-29T06:22:27.536Z",
+  "base": "https://focusframe-photostudio.onrender.com",
+  "checks": [
+    {
+      "path": "/api/__health",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/halls/12",
+      "status": 200
+    },
+    {
+      "path": "/bookings/new",
+      "status": 200
+    },
+    {
+      "path": "/main.dart.js",
+      "status": 200
+    },
+    {
+      "path": "/missing-file.js",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/account/bookings",
+      "status": 200
+    },
+    {
+      "path": "/api/users",
+      "status": 403
+    }
+  ]
+}
