@@ -5,6 +5,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ARG FLUTTER_VERSION=3.27.2
 RUN git clone --depth 1 --branch ${FLUTTER_VERSION} https://github.com/flutter/flutter.git /opt/flutter
 ENV PATH="/opt/flutter/bin:${PATH}"
+# Render builds containers in a user namespace: SDK archives must not restore
+# the original machine's numeric uid/gid when tar extracts Flutter resources.
+ENV TAR_OPTIONS="--no-same-owner"
 RUN git config --global --add safe.directory /opt/flutter && flutter config --enable-web --no-analytics
 WORKDIR /app
 COPY pubspec.yaml pubspec.lock ./
