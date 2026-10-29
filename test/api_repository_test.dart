@@ -379,7 +379,8 @@ void main() {
   group('адрес сервера', () {
     test('задаётся параметром сборки, а не константой', () {
       // Значение по умолчанию указывает на учебный сервер.
-      expect(apiBaseUrl, 'http://localhost:8080/api');
+      expect(apiBaseUrl,
+          const String.fromEnvironment('API_BASE_URL', defaultValue: '/api'));
     });
   });
 

@@ -51,7 +51,7 @@ class _RoleScreenState extends State<RoleScreen> {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-          title: Text(_title),
+          title: Text(_title, maxLines: 1, overflow: TextOverflow.ellipsis),
           leading: BackButton(onPressed: () => context.go('/')),
           actions: [
             IconButton(

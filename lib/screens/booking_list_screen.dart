@@ -10,6 +10,7 @@ import '../state/catalog_notifiers.dart';
 import '../state/session.dart';
 import '../state/list_notifier.dart';
 import '../widgets/common.dart';
+import '../widgets/responsive.dart';
 import '../widgets/entity_table.dart';
 import '../widgets/state_views.dart';
 import '../widgets/record_actions.dart';
@@ -90,7 +91,10 @@ class _BookingListScreenState extends State<BookingListScreen> {
           ),
         ),
       );
-  Widget _filters(BookingListNotifier notifier, CatalogNotifier catalog) {
+  Widget _filters(BookingListNotifier notifier, CatalogNotifier catalog) =>
+      AdaptiveFilters(child: _filterFields(notifier, catalog));
+
+  Widget _filterFields(BookingListNotifier notifier, CatalogNotifier catalog) {
     final query = widget.query;
     return Padding(
       padding: const EdgeInsets.all(12),
@@ -121,7 +125,9 @@ class _BookingListScreenState extends State<BookingListScreen> {
                       value: null, child: Text('Все залы')),
                   for (final hall in catalog.halls)
                     DropdownMenuItem<int?>(
-                        value: hall.id, child: Text(hall.name)),
+                        value: hall.id,
+                        child: Text(hall.name,
+                            maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
                 onChanged: (value) => _go(query.copyWith(hallId: value)))),
         SizedBox(
@@ -140,7 +146,8 @@ class _BookingListScreenState extends State<BookingListScreen> {
                   for (final photographer in catalog.photographers)
                     DropdownMenuItem<int?>(
                         value: photographer.id,
-                        child: Text(photographer.fullName)),
+                        child: Text(photographer.fullName,
+                            maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
                 onChanged: (value) =>
                     _go(query.copyWith(photographerId: value)))),
@@ -157,7 +164,10 @@ class _BookingListScreenState extends State<BookingListScreen> {
                   const DropdownMenuItem<String?>(
                       value: null, child: Text('Все типы')),
                   for (final type in catalog.shootingTypes)
-                    DropdownMenuItem<String?>(value: type, child: Text(type)),
+                    DropdownMenuItem<String?>(
+                        value: type,
+                        child: Text(type,
+                            maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
                 onChanged: (value) =>
                     _go(query.copyWith(shootingType: value)))),
@@ -277,7 +287,7 @@ class _BookingListScreenState extends State<BookingListScreen> {
   }
 
   Widget _card(Booking item, CatalogNotifier catalog) => Card(
-        child: ListTile(
+        child: ResponsiveRecordTile(
           leading: Checkbox(
               value: context
                   .watch<BookingListNotifier>()

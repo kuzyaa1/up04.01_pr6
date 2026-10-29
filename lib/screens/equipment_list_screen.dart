@@ -9,6 +9,7 @@ import '../state/catalog_notifiers.dart';
 import '../state/session.dart';
 import '../state/list_notifier.dart';
 import '../widgets/common.dart';
+import '../widgets/responsive.dart';
 import '../widgets/entity_table.dart';
 import '../widgets/state_views.dart';
 import '../widgets/record_actions.dart';
@@ -97,7 +98,11 @@ class _EquipmentListScreenState extends State<EquipmentListScreen> {
     );
   }
 
-  Widget _filters(EquipmentListNotifier notifier, CatalogNotifier catalog) {
+  Widget _filters(EquipmentListNotifier notifier, CatalogNotifier catalog) =>
+      AdaptiveFilters(child: _filterFields(notifier, catalog));
+
+  Widget _filterFields(
+      EquipmentListNotifier notifier, CatalogNotifier catalog) {
     final query = widget.query;
     return Padding(
       padding: const EdgeInsets.all(12),
@@ -144,7 +149,9 @@ class _EquipmentListScreenState extends State<EquipmentListScreen> {
                       value: null, child: Text('Все залы')),
                   for (final hall in catalog.halls)
                     DropdownMenuItem<int?>(
-                        value: hall.id, child: Text(hall.name)),
+                        value: hall.id,
+                        child: Text(hall.name,
+                            maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
                 onChanged: (value) => _go(query.copyWith(hallId: value)))),
         _numberField('Кол-во от', query.quantityFrom,
@@ -245,7 +252,7 @@ class _EquipmentListScreenState extends State<EquipmentListScreen> {
   }
 
   Widget _card(Equipment item, CatalogNotifier catalog) => Card(
-        child: ListTile(
+        child: ResponsiveRecordTile(
           leading: Checkbox(
               value: context
                   .watch<EquipmentListNotifier>()

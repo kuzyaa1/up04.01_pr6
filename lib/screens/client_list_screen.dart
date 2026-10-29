@@ -10,6 +10,7 @@ import '../state/catalog_notifiers.dart';
 import '../state/session.dart';
 import '../state/list_notifier.dart';
 import '../widgets/common.dart';
+import '../widgets/responsive.dart';
 import '../widgets/entity_table.dart';
 import '../widgets/state_views.dart';
 import '../widgets/record_actions.dart';
@@ -104,7 +105,10 @@ class _ClientListScreenState extends State<ClientListScreen> {
     );
   }
 
-  Widget _filters(ClientListNotifier notifier) {
+  Widget _filters(ClientListNotifier notifier) =>
+      AdaptiveFilters(child: _filterFields(notifier));
+
+  Widget _filterFields(ClientListNotifier notifier) {
     final query = widget.query;
     return Padding(
       padding: const EdgeInsets.all(12),
@@ -146,7 +150,10 @@ class _ClientListScreenState extends State<ClientListScreen> {
                   const DropdownMenuItem<String?>(
                       value: null, child: Text('Все типы')),
                   for (final type in _clientTypes)
-                    DropdownMenuItem<String?>(value: type, child: Text(type)),
+                    DropdownMenuItem<String?>(
+                        value: type,
+                        child: Text(type,
+                            maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
                 onChanged: (value) => _go(query.copyWith(clientType: value)))),
         _numberField('Выдан с', query.yearFrom,
@@ -247,7 +254,7 @@ class _ClientListScreenState extends State<ClientListScreen> {
   }
 
   Widget _card(Client item) => Card(
-        child: ListTile(
+        child: ResponsiveRecordTile(
           leading: Checkbox(
               value: context
                   .watch<ClientListNotifier>()

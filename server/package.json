@@ -2,10 +2,10 @@
   "name": "focusframe-mock-server",
   "version": "1.0.0",
   "private": true,
-  "description": "Учебный мок-сервер REST API фотостудии FocusFrame для практической работы 4.",
+  "description": "Учебный REST API и сервер релизной сборки фотостудии FocusFrame.",
   "main": "mock-server.js",
   "scripts": {
-    "start": "node mock-server.js --port 8080 --origin http://localhost:5555",
+    "start": "node mock-server.js",
     "check": "node check-api.js",
     "test": "node test-api.js",
     "test:auth": "node test-auth.js",

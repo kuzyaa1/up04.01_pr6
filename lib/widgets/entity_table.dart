@@ -48,7 +48,15 @@ class EntityTable<T> extends StatelessWidget {
                 DataCell(Checkbox(
                     value: selected.contains(id(item)),
                     onChanged: (_) => toggle(id(item)))),
-                for (final column in columns) DataCell(column.$3(item)),
+                for (final column in columns)
+                  DataCell(ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 230),
+                    child: DefaultTextStyle.merge(
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      child: column.$3(item),
+                    ),
+                  )),
                 DataCell(Row(
                     mainAxisSize: MainAxisSize.min, children: actions(item))),
               ]),

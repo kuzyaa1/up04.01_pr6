@@ -5,8 +5,9 @@ import 'package:provider/provider.dart';
 import '../state/session.dart';
 import '../core/api_exceptions.dart';
 import '../core/errors.dart';
+import 'responsive.dart';
 
-const compactWidth = 900.0;
+const compactWidth = tableWidth;
 
 /// Keeps URL-driven filters in sync without losing focus while typing.
 class QueryTextField extends StatefulWidget {
@@ -89,11 +90,14 @@ class AppScaffold extends StatelessWidget {
     final visible = destinations
         .where((d) => d.$3 != '/clients' || permissions.canManageClients)
         .toList();
-    final visibleIndex =
-        visible.indexOf(destinations[index]).clamp(0, visible.length - 1);
-    final compact = MediaQuery.sizeOf(context).width < compactWidth;
+    visible.insert(0, (Icons.home_outlined, 'Главная', '/'));
+    final visibleIndex = index < 0
+        ? 0
+        : visible.indexOf(destinations[index]).clamp(0, visible.length - 1);
+    final width = MediaQuery.sizeOf(context).width;
+    final compact = width < phoneWidth;
     final app = AppBar(
-      title: Text(title),
+      title: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis),
       actions: [
         ...actions,
         if (onRefresh != null)
@@ -108,8 +112,10 @@ class AppScaffold extends StatelessWidget {
     if (compact) {
       return Scaffold(
           appBar: app,
-          body: child,
+          body: SafeArea(child: child),
           bottomNavigationBar: NavigationBar(
+              labelBehavior:
+                  NavigationDestinationLabelBehavior.onlyShowSelected,
               selectedIndex: visibleIndex,
               onDestinationSelected: (i) => context.go(visible[i].$3),
               destinations: [
@@ -122,14 +128,19 @@ class AppScaffold extends StatelessWidget {
         body: Row(children: [
           NavigationRail(
               selectedIndex: visibleIndex,
-              extended: MediaQuery.sizeOf(context).width >= 1200,
+              extended: width >= 1200,
               onDestinationSelected: (i) => context.go(visible[i].$3),
               destinations: [
                 for (final d in visible)
                   NavigationRailDestination(icon: Icon(d.$1), label: Text(d.$2))
               ]),
           const VerticalDivider(width: 1),
-          Expanded(child: child)
+          Expanded(
+              child: Center(
+                  child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: contentWidth),
+            child: child,
+          )))
         ]));
   }
 }
@@ -161,10 +172,12 @@ class SessionAction extends StatelessWidget {
                 child: Text(user.fullName.isEmpty
                     ? '?'
                     : user.fullName[0].toUpperCase())),
-            const SizedBox(width: 8),
-            ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 140),
-                child: Text(user.fullName, overflow: TextOverflow.ellipsis)),
+            if (MediaQuery.sizeOf(context).width >= phoneWidth) ...[
+              const SizedBox(width: 8),
+              ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 140),
+                  child: Text(user.fullName, overflow: TextOverflow.ellipsis)),
+            ],
           ])),
       onSelected: (value) async {
         if (value == 'home') {
@@ -236,16 +249,20 @@ class Pager extends StatelessWidget {
                   if (x != null) onSize(x);
                 }),
             IconButton(
+                tooltip: 'Первая страница',
                 onPressed: page > 1 ? () => onPage(1) : null,
                 icon: const Icon(Icons.first_page)),
             IconButton(
+                tooltip: 'Предыдущая страница',
                 onPressed: page > 1 ? () => onPage(page - 1) : null,
                 icon: const Icon(Icons.chevron_left)),
             Text('$page / $totalPages'),
             IconButton(
+                tooltip: 'Следующая страница',
                 onPressed: page < totalPages ? () => onPage(page + 1) : null,
                 icon: const Icon(Icons.chevron_right)),
             IconButton(
+                tooltip: 'Последняя страница',
                 onPressed: page < totalPages ? () => onPage(totalPages) : null,
                 icon: const Icon(Icons.last_page))
           ]));

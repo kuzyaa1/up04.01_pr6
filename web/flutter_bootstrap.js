@@ -16,8 +16,10 @@
         .map(name => caches.delete(name)));
     }
   }
-  for (const build of _flutter.buildConfig.builds) {
-    if (build.mainJsPath) build.mainJsPath += '?rev=api-409-2';
+  try {
+    await _flutter.loader.load();
+  } catch (error) {
+    window.focusFrameLoadError?.();
+    console.error('FocusFrame failed to initialize', error);
   }
-  _flutter.loader.load();
 })();

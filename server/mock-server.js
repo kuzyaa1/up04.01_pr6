@@ -37,9 +37,9 @@ function arg(name, fallback) {
   return i !== -1 && args[i + 1] ? args[i + 1] : fallback;
 }
 
-const PORT = Number(arg('port', 8080));
-const ORIGIN = arg('origin', 'http://localhost:5555');
-const SECRET = 'учебный-ключ-фотостудии-не-для-продакшена';
+const PORT = Number(arg('port', process.env.PORT || 8080));
+const ORIGIN = arg('origin', process.env.CORS_ORIGIN || 'http://localhost:5555');
+const SECRET = process.env.JWT_SECRET || crypto.randomBytes(48).toString('hex');
 const ACCESS_TTL = Number(arg('ttl', 900)); // секунд
 const REFRESH_TTL = 60 * 60 * 24 * 7;
 const SESSION_TTL = Number(arg('session-ttl', 1800));
@@ -1222,6 +1222,9 @@ if (!ephemeral && fs.existsSync(dataFile)) {
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  if (process.env.STATIC_DIR && !/^\/api(?:\/|$)/.test(url.pathname)) {
+    return require('./static-files').serveStatic(req, res, process.env.STATIC_DIR);
+  }
 
   // Предварительный запрос браузера. Без этого обработчика
   // на web не заработает ни один запрос с заголовком Authorization.

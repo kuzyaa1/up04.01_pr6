@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -17,6 +17,7 @@
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="FocusFrame — система бронирования фотостудии.">
 
@@ -31,8 +32,43 @@
 
   <title>FocusFrame — фотостудия</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; min-height: 100%; background: #fff8ff; }
+    #loading { position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; padding: 24px;
+      font-family: Arial, sans-serif; text-align: center; color: #302b37; }
+    #loading h1 { font-size: 28px; margin-bottom: 8px; }
+    #loading p { max-width: 400px; line-height: 1.5; }
+    .spinner { width: 36px; height: 36px; margin-top: 20px; border: 4px solid #e8def8;
+      border-top-color: #67508a; border-radius: 50%; animation: spin 1s linear infinite; }
+    #loading button { padding: 12px 20px; font-size: 16px; cursor: pointer; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+  </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js?rev=api-409-2" async></script>
+  <div id="loading" role="status" aria-live="polite">
+    <h1>FocusFrame</h1><p>Система бронирования фотостудии</p>
+    <div class="spinner" aria-label="Загрузка приложения"></div>
+    <p id="loading-message">Загружаем приложение…</p>
+    <button id="loading-retry" hidden onclick="location.reload()">Повторить загрузку</button>
+  </div>
+  <noscript>Для бронирования залов включите JavaScript в браузере.</noscript>
+  <script>
+    window.addEventListener('flutter-first-frame', () => {
+      window.focusFrameReadyMs = performance.now();
+      document.documentElement.dataset.firstFrameMs = window.focusFrameReadyMs.toFixed(1);
+      performance.mark('focusframe-first-frame');
+      document.getElementById('loading')?.remove();
+    });
+    window.focusFrameLoadError = () => {
+      const message = document.getElementById('loading-message');
+      if (!message) return;
+      message.textContent = 'Загрузка не завершена. Проверьте соединение и повторите попытку.';
+      document.getElementById('loading-retry').hidden = false;
+    };
+    setTimeout(window.focusFrameLoadError, 45000);
+  </script>
+  <script src="flutter_bootstrap.js" async onerror="window.focusFrameLoadError()"></script>
 </body>
 </html>

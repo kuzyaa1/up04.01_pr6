@@ -9,6 +9,7 @@ import '../state/session.dart';
 import '../state/list_notifier.dart';
 import '../state/list_notifiers.dart';
 import '../widgets/common.dart';
+import '../widgets/responsive.dart';
 import '../widgets/entity_table.dart';
 import '../widgets/state_views.dart';
 import '../widgets/record_actions.dart';
@@ -87,7 +88,10 @@ class _HallListScreenState extends State<HallListScreen> {
     );
   }
 
-  Widget _filters(HallListNotifier notifier, CatalogNotifier catalog) {
+  Widget _filters(HallListNotifier notifier, CatalogNotifier catalog) =>
+      AdaptiveFilters(child: _filterFields(notifier, catalog));
+
+  Widget _filterFields(HallListNotifier notifier, CatalogNotifier catalog) {
     final query = widget.query;
     return Padding(
       padding: const EdgeInsets.all(12),
@@ -117,7 +121,10 @@ class _HallListScreenState extends State<HallListScreen> {
                   const DropdownMenuItem<String?>(
                       value: null, child: Text('Все стили')),
                   for (final style in catalog.hallStyles)
-                    DropdownMenuItem<String?>(value: style, child: Text(style)),
+                    DropdownMenuItem<String?>(
+                        value: style,
+                        child: Text(style,
+                            maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
                 onChanged: (value) => _go(query.copyWith(style: value)))),
         _numberField('Мест от', query.capacityFrom,
@@ -217,7 +224,7 @@ class _HallListScreenState extends State<HallListScreen> {
   }
 
   Widget _card(StudioHall item) => Card(
-        child: ListTile(
+        child: ResponsiveRecordTile(
           leading: Checkbox(
               value:
                   context.watch<HallListNotifier>().selected.contains(item.id),

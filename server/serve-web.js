@@ -1,18 +1,20 @@
 'use strict';
-// Preview `flutter build web` with history fallback for GoRouter URLs.
 const http = require('node:http');
-const fs = require('node:fs');
 const path = require('node:path');
-const root = path.resolve(__dirname, '../build/web');
-const types = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.css': 'text/css', '.wasm': 'application/wasm', '.png': 'image/png', '.woff2': 'font/woff2' };
+const { serveStatic } = require('./static-files');
+const root = path.resolve(process.env.WEB_ROOT || path.join(__dirname, '../build/web'));
+const port = Number(process.env.PORT || 5555);
 http.createServer((req, res) => {
-  const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
-  let file = path.resolve(root, '.' + pathname);
-  if (file !== root && !file.startsWith(root + path.sep)) { res.writeHead(403); return res.end(); }
-  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) file = path.join(root, 'index.html');
-  res.writeHead(200, {
-    'Content-Type': types[path.extname(file)] || 'application/octet-stream',
-    'Cache-Control': 'no-store',
-  });
-  fs.createReadStream(file).pipe(res);
-}).listen(5555, () => console.log('Preview: http://localhost:5555'));
+  if (/^\/api(?:\/|\?|$)/.test(req.url)) {
+    const upstream = http.request({
+      hostname: '127.0.0.1', port: Number(process.env.API_PORT || 8080),
+      path: req.url, method: req.method, headers: req.headers,
+    }, response => { res.writeHead(response.statusCode, response.headers); response.pipe(res); });
+    upstream.on('error', () => {
+      if (!res.headersSent) res.writeHead(502, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Сервер фотостудии временно недоступен' }));
+    });
+    req.pipe(upstream); return;
+  }
+  serveStatic(req, res, root);
+}).listen(port, () => console.log(`FocusFrame preview: http://localhost:${port}`));

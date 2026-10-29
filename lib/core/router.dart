@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../core/permissions.dart';
 import '../screens/register_screen.dart';
-import '../screens/role_screen.dart';
+import '../widgets/deferred_role_screen.dart';
 import '../models/booking_query.dart';
 import '../models/client_query.dart';
 import '../models/equipment_query.dart';
@@ -123,7 +123,7 @@ GoRouter createRouter(SessionStore session) {
       GoRoute(path: '/forbidden', builder: (_, __) => const NoAccessScreen()),
       GoRoute(
           path: '/my-bookings',
-          builder: (_, __) => const RoleScreen(kind: 'client')),
+          builder: (_, __) => const DeferredRoleScreen(kind: 'client')),
       GoRoute(
           path: '/my-bookings/new',
           onExit: (_, __) =>
@@ -134,13 +134,13 @@ GoRouter createRouter(SessionStore session) {
                   int.tryParse(state.uri.queryParameters['hallId'] ?? ''))),
       GoRoute(
           path: '/manager',
-          builder: (_, __) => const RoleScreen(kind: 'manager')),
+          builder: (_, __) => const DeferredRoleScreen(kind: 'manager')),
       GoRoute(
           path: '/admin/users',
-          builder: (_, __) => const RoleScreen(kind: 'users')),
+          builder: (_, __) => const DeferredRoleScreen(kind: 'users')),
       GoRoute(
           path: '/admin/statistics',
-          builder: (_, __) => const RoleScreen(kind: 'statistics')),
+          builder: (_, __) => const DeferredRoleScreen(kind: 'statistics')),
       // Экран входа живёт вне общего каркаса: меню разделов на нём не нужно.
       GoRoute(
         path: '/login',

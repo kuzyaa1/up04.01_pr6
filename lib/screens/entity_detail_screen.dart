@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import '../state/session.dart';
+import '../widgets/state_views.dart';
 import '../models/booking.dart';
 import '../models/client.dart';
 import '../models/equipment.dart';
@@ -23,7 +24,7 @@ class EntityDetailScreen extends StatefulWidget {
 }
 
 class _EntityDetailScreenState extends State<EntityDetailScreen> {
-  late final Future<Map<String, String>?> _details = _load();
+  late Future<Map<String, String>?> _details = _load();
   Future<Map<String, String>?> _load() async {
     final halls = context.read<HallRepository>();
     final clients = context.read<ClientRepository>();
@@ -126,7 +127,10 @@ class _EntityDetailScreenState extends State<EntityDetailScreen> {
             future: _details,
             builder: (context, snapshot) {
               if (snapshot.hasError) {
-                return const Center(child: Text('Не удалось загрузить запись'));
+                return ErrorView(
+                  message: 'Не удалось загрузить запись. Проверьте соединение.',
+                  onRetry: () => setState(() => _details = _load()),
+                );
               }
               if (snapshot.connectionState != ConnectionState.done) {
                 return const Center(child: CircularProgressIndicator());

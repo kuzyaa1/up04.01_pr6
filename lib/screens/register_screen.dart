@@ -132,7 +132,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           size: 18,
                                           color: rule.$1 ? Colors.green : null),
                                       const SizedBox(width: 8),
-                                      Text(rule.$2)
+                                      Expanded(child: Text(rule.$2))
                                     ])),
                               const SizedBox(height: 12),
                               _field(

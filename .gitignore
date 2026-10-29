@@ -48,3 +48,7 @@ app.*.map.json
 /server/.local-state.json*
 /.audit_pr4/
 /.audit_pr5/
+
+/.audit_pr6/
+/server/*.err
+/deploy/web/

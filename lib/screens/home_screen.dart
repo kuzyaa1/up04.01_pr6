@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../core/permissions.dart';
 import '../state/session.dart';
 import '../widgets/common.dart';
+import '../widgets/responsive.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -36,12 +37,10 @@ class HomeScreen extends StatelessWidget {
         'Многие к одному с залами'
       ),
     ];
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('FocusFrames — фотостудия'),
-        actions: const [SessionAction()],
-      ),
-      body: Center(
+    return AppScaffold(
+      title: 'FocusFrame — фотостудия',
+      index: -1,
+      child: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 860),
           child: SingleChildScrollView(
@@ -94,7 +93,9 @@ class HomeScreen extends StatelessWidget {
                     for (final entity in entities.where((e) =>
                         e.$3 != '/clients' || permissions.canManageClients))
                       SizedBox(
-                        width: 250,
+                        width: MediaQuery.sizeOf(context).width < phoneWidth
+                            ? MediaQuery.sizeOf(context).width - 48
+                            : 250,
                         child: Card(
                           child: InkWell(
                             onTap: () => context.go(entity.$3),
@@ -169,7 +170,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(children: [
+            Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
               const Icon(Icons.account_circle_outlined),
               const SizedBox(width: 12),
               Expanded(
@@ -177,6 +178,8 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(user.fullName,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(fontWeight: FontWeight.w600)),
                     Text(
                       'Роль: ${permissions.role.title} · ${user.email}',
@@ -185,7 +188,8 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              if (permissions.isReadOnly)
+              if (permissions.isReadOnly &&
+                  MediaQuery.sizeOf(context).width >= phoneWidth)
                 const Chip(
                   avatar: Icon(Icons.lock_outline, size: 16),
                   label: Text('каталог: просмотр'),
@@ -218,7 +222,9 @@ class HomeScreen extends StatelessWidget {
                     : Theme.of(context).colorScheme.primary,
               ),
               const SizedBox(width: 8),
-              Text(rule, style: Theme.of(context).textTheme.bodySmall),
+              Expanded(
+                  child:
+                      Text(rule, style: Theme.of(context).textTheme.bodySmall)),
             ]),
           ),
       ],

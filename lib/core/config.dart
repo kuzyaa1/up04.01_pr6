@@ -4,13 +4,13 @@
 /// flutter run -d chrome --web-port=5555 --dart-define=API_BASE_URL=http://192.168.1.10:8080/api
 /// ```
 ///
-/// Значение по умолчанию рассчитано на учебный сервер, запущенный локально.
+/// В опубликованной версии API и сайт работают на одном HTTPS-источнике.
 library;
 
 /// Базовый адрес REST API. Задаётся через `--dart-define=API_BASE_URL=...`.
 const String apiBaseUrl = String.fromEnvironment(
   'API_BASE_URL',
-  defaultValue: 'http://localhost:8080/api',
+  defaultValue: '/api',
 );
 
 /// Токен доступа. Задаётся через `--dart-define=API_TOKEN=...`.

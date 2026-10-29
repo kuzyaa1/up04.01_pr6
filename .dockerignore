@@ -1,0 +1,14 @@
+.git
+.dart_tool
+build
+.audit*
+docs
+test
+android
+ios
+linux
+macos
+windows
+server/.local-state.json*
+server/*.log
+server/*.err

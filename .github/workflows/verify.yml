@@ -1,0 +1,38 @@
+name: Verify and build FocusFrame
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.27.2'
+          channel: stable
+          cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: flutter pub get
+      - run: dart format --output=none --set-exit-if-changed lib test
+      - run: flutter analyze
+      - run: flutter test
+      - run: node server/test-api.js && node server/test-auth.js && node server/test-booking-roles.js && node --test server/static-files.test.js
+      - run: flutter build web --release --no-web-resources-cdn --dart-define=API_BASE_URL=/api
+      - run: node scripts/optimize-web.js build/web
+      - uses: actions/upload-artifact@v4
+        with:
+          name: focusframe-web-release
+          path: build/web
+      - run: flutter build web --release --wasm --no-web-resources-cdn --dart-define=API_BASE_URL=/api
+      - uses: actions/upload-artifact@v4
+        with:
+          name: focusframe-web-wasm
+          path: build/web
+# Render watches main with autoDeployTrigger: checksPass (render.yaml).

@@ -22,7 +22,13 @@ Dio buildDio(
     Future<void> Function()? onSessionExpired}) {
   final dio = Dio(
     BaseOptions(
-      baseUrl: apiBaseUrl,
+      // Web resolves /api against the deployment origin. Native test adapters
+      // require an absolute URI even when they never open a network connection.
+      baseUrl: kIsWeb || Uri.parse(apiBaseUrl).hasScheme
+          ? apiBaseUrl
+          : Uri(scheme: 'http', host: 'localhost')
+              .resolve(apiBaseUrl)
+              .toString(),
       connectTimeout: Duration(seconds: connectTimeoutSeconds),
       receiveTimeout: Duration(seconds: receiveTimeoutSeconds),
       headers: {'Content-Type': 'application/json'},
