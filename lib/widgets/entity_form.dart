@@ -21,6 +21,7 @@ class FieldSpec {
   final FieldType type;
   final Object? initialValue;
   final String? hint;
+  final String emptyMessage;
   final List<Validator> validators;
   final String? serverError;
   final List<DropdownEntry> options;
@@ -36,6 +37,7 @@ class FieldSpec {
     this.type = FieldType.text,
     this.initialValue,
     this.hint,
+    this.emptyMessage = 'Нет доступных значений',
     this.validators = const [],
     this.serverError,
     this.options = const [],
@@ -51,6 +53,7 @@ class FieldSpec {
         type: type,
         initialValue: initialValue ?? this.initialValue,
         hint: hint,
+        emptyMessage: emptyMessage,
         validators: validators,
         serverError: serverError,
         options: options,
@@ -547,6 +550,7 @@ class EntityFormState extends State<EntityForm> {
       builder: (state) => InputDecorator(
         decoration: InputDecoration(
           labelText: field.label,
+          floatingLabelBehavior: FloatingLabelBehavior.always,
           helperText: field.hint,
           helperMaxLines: 2,
           border: const OutlineInputBorder(),
@@ -592,7 +596,7 @@ class EntityFormState extends State<EntityForm> {
             if (options.isEmpty)
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 6),
-                child: Text('Нет доступных значений',
+                child: Text(field.emptyMessage,
                     style: TextStyle(
                         color: Theme.of(context).hintColor, fontSize: 13)),
               ),

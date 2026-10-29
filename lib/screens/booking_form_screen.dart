@@ -50,7 +50,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     try {
       final catalog = context.read<CatalogNotifier>();
       final repository = context.read<BookingRepository>();
-      await catalog.load();
+      await catalog.load(force: true);
       if (catalog.error != null) throw StateError(catalog.error!);
       Booking? booking;
       if (widget.id != null) {
@@ -120,16 +120,21 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
         label: 'Фотографы',
         type: FieldType.multiselect,
         initialValue: booking?.photographerIds ?? const [],
-        hint: 'Связь «многие ко многим»: доступны работающие в выбранном зале',
+        hint:
+            'Можно выбрать несколько фотографов, работающих в выбранном зале.',
+        emptyMessage: 'Для этого зала пока не назначены фотографы. '
+            'Выберите другой зал или обратитесь к администратору.',
         isWideList: true,
         options: [
           for (final photographer in _availablePhotographers(catalog))
             DropdownEntry(photographer.id, photographer.fullName),
         ],
         validators: [
-          (value) => value == null || value == ''
-              ? 'Выберите хотя бы одного фотографа'
-              : null
+          (value) => _availablePhotographers(catalog).isEmpty
+              ? 'В выбранном зале нет назначенных фотографов'
+              : value == null || value == ''
+                  ? 'Выберите хотя бы одного фотографа'
+                  : null
         ],
       ),
       FieldSpec(

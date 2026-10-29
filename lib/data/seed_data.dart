@@ -254,7 +254,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Портрет',
       experienceYears: 7,
       hourlyRate: 4500,
-      hallIds: [1, 2, 10],
+      hallIds: [1, 2, 10, 20],
       bookingIds: [1, 6]),
   Photographer(
       id: 2,
@@ -263,7 +263,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Fashion',
       experienceYears: 9,
       hourlyRate: 6000,
-      hallIds: [2, 9, 13],
+      hallIds: [2, 9, 13, 21],
       bookingIds: [2, 9]),
   Photographer(
       id: 3,
@@ -272,7 +272,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Семейная съёмка',
       experienceYears: 5,
       hourlyRate: 4000,
-      hallIds: [1, 5],
+      hallIds: [1, 5, 12, 22],
       bookingIds: [1, 3]),
   Photographer(
       id: 4,
@@ -281,7 +281,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Предметная съёмка',
       experienceYears: 8,
       hourlyRate: 5500,
-      hallIds: [4, 7],
+      hallIds: [4, 7, 14, 23],
       bookingIds: [5]),
   Photographer(
       id: 5,
@@ -290,7 +290,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Контент для брендов',
       experienceYears: 6,
       hourlyRate: 5000,
-      hallIds: [3, 6],
+      hallIds: [3, 6, 15, 24],
       bookingIds: [7]),
   Photographer(
       id: 6,
@@ -299,7 +299,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Портрет',
       experienceYears: 4,
       hourlyRate: 3500,
-      hallIds: [6, 8],
+      hallIds: [6, 8, 16, 25],
       bookingIds: [8]),
   Photographer(
       id: 7,
@@ -308,7 +308,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Семейная съёмка',
       experienceYears: 10,
       hourlyRate: 6500,
-      hallIds: [5, 8],
+      hallIds: [5, 8, 17],
       bookingIds: [3, 10]),
   Photographer(
       id: 8,
@@ -317,7 +317,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Fashion',
       experienceYears: 3,
       hourlyRate: 3200,
-      hallIds: [10],
+      hallIds: [10, 11, 18],
       bookingIds: [6]),
   Photographer(
       id: 9,
@@ -335,7 +335,7 @@ const seedPhotographers = <Photographer>[
       specialization: 'Предметная съёмка',
       experienceYears: 11,
       hourlyRate: 7000,
-      hallIds: [7, 13],
+      hallIds: [7, 13, 19],
       bookingIds: [4, 9]),
 ];
 const seedEquipment = <Equipment>[
